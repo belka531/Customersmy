@@ -5,8 +5,13 @@ const Company = require('../companies/model')
 const router = new Router()
 
 router.get('/customers', (req, res, next) => {
+  const limit = req.query.limit || 25
+  const offset = req.query.offset || 0
+
   Customer
-    .findAll()
+    .findAll({
+      limit, offset
+    })
     .then(customers => {
       res.send({ customers })
     })
