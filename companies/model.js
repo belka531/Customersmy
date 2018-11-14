@@ -16,6 +16,10 @@ const Company = sequelize.define('companies', {
     type: Sequelize.STRING,
     allowNull: true
   },
+  },
+  {
+    timestamps: false,
+    tableName: 'companies'
   })
 
 module.exports = Company
