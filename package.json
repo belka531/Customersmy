@@ -9,7 +9,7 @@
     "pg": "^7.4.3",
     "sequelize": "^4.38.0"
   },
-  "script": {
+  "scripts": {
     "start": "node index.js"
   }
   
